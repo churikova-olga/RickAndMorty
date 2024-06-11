@@ -2,7 +2,7 @@
 
   <div class="v-card-item-border">
     <div class="v-card-item-wrapper">
-    <div class="card " v-if="item_data">
+    <div class="card" v-if="item_data" style="background-color:rgb(60, 62, 68) ">
       <div class="row g-0">
         <div class="col-md-4">
           <img :src="item_data.image" class="img-fluid rounded-start" style="height: 200px; width: 200px" alt="...">
@@ -70,10 +70,10 @@ export default {
   height: 100%;
 
 }
-.card{
-  height: 100%;
-  background-color:rgb(60, 62, 68);
-}
+/*.card{*/
+/*  height: 100%;*/
+/*  background-color:rgb(60, 62, 68);*/
+/*}*/
 .card-body{
   text-align: left;
 }
