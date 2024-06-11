@@ -3,7 +3,7 @@
   <div class="v-catalog">
     <h1 class="title">Characters</h1>
 <div class="  filter-menu row">
-  <div class="col-3">
+  <div class="col-3 v-menu-wrapper">
     <div class="dropdown">
       <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
         {{flagStatus}}
@@ -17,10 +17,10 @@
       </ul>
     </div>
   </div>
-  <div class="col-6">
+  <div class="col-6 v-menu-wrapper">
         <input v-model="search" class="form-control me-2" type="search" placeholder="Search name..." aria-label="Search">
   </div>
-  <div class="col-2">
+  <div class="col-2 v-menu-wrapper">
     <button type="button" class="btn btn-secondary" @click="this.applyFilter()"> Apply </button>
   </div>
 </div>
@@ -32,7 +32,7 @@
         v-for="item in this.FILTER_CATALOG"
         :key="item.id"
         v-bind:item_data="item"
-        class="v-list-group-item col-5 "
+        class=" col-5 v-list-group-item"
       />
     </ul>
       </div>
@@ -160,12 +160,10 @@ export default {
 
 }
 .v-list-group-item{
-
    position: relative;
    display: block;
    color: #212529;
    text-decoration: none;
-  max-height: 200px;
   margin: 10px;
 }
 .page-item{
@@ -176,4 +174,15 @@ export default {
   color: white;
   font-family: Roboto Slab;
 }
+
+.v-menu-wrapper{
+  margin: 10px 0;
+}
+@media only screen and (max-width: 1200px) {
+  .v-list-group-item {
+     width: 100% !important;
+  }
+}
+
+
 </style>
