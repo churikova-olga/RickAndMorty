@@ -2,8 +2,8 @@
 
   <div class="v-catalog">
     <h1 class="title">Characters</h1>
-<div class="row filter-menu">
-  <div class="col-4">
+<div class="  filter-menu row">
+  <div class="col-3">
     <div class="dropdown">
       <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
         {{flagStatus}}
@@ -139,7 +139,11 @@ export default {
   font-family: Roboto Slab;;
 }
 .filter-menu{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 30px 0;
+  width: 100%;
 }
 .v-catalog-list{
   padding: 15px;
@@ -166,6 +170,7 @@ export default {
 }
 .page-item{
   cursor: pointer;
+  background-color: rgb(39, 43, 51);
 }
 .v-not-characters{
   color: white;
